@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="src/output.css" />
   </head>
   <body class="bg-secondary text-center">
-    <h1 class="text-black font-instrument-serif text-7xl pt-12">
+    <h1
+      class="text-black font-instrument-serif text-7xl pt-12 lg:text-9xl lg:pt-20"
+    >
       Guess The <span class="text-primary">Number</span>
     </h1>
     <p>I'm thinking of a number between 1-100!</p>
@@ -21,8 +23,7 @@
           type="number"
           min="0"
           max="100"
-          name=""
-          id=""
+          id="guessInput"
           placeholder="67"
           class="bg-white border border-primary border-8 p-2 rounded-2xl text-center font-extrabold"
         />
@@ -32,10 +33,19 @@
           Check!
         </button>
       </div>
+      <div class="pt-4">
+        <p>Attempts: <span id="attempts">0</span></p>
+        <button
+          id="resetBtn"
+          class="bg-primary text-secondary p-2 font-extrabold rounded-2xl mt-2"
+        >
+          Play Again
+        </button>
+      </div>
     </div>
 
     <!-- Answer -->
-    <div class="pt-24">
+    <div class="pt-14">
       <p>And your guess is..</p>
       <h2 class="font-instrument-serif text-7xl text-primary pt-4">CORRECT!</h2>
       <p>
@@ -44,8 +54,10 @@
       </p>
     </div>
 
-    <footer class="absolute bottom-0 translate-1/2">
-      <p class="text-center">Made with ♡ by <a href="">queenshafarania</a></p>
+    <footer class="flex justify-center items-center">
+      <p class="text-center absolute bottom-0">
+        Made with ♡ by <a href="">queenshafarania</a>
+      </p>
     </footer>
   </body>
 </html>
