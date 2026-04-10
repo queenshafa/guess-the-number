@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="bg-secondary text-center">
+    <h1 class="text-black font-instrument-serif text-7xl pt-12">
+      Guess The <span class="text-primary">Number</span>
+    </h1>
+    <p>I'm thinking of a number between 1-100!</p>
+
+    <!-- Textbox -->
+    <div class="pt-26">
+      <p>My guess is..</p>
+      <div class="flex items-center justify-center gap-3 pt-4">
+        <input
+          type="number"
+          min="0"
+          max="100"
+          name=""
+          id=""
+          placeholder="67"
+          class="bg-white border border-primary border-8 p-2 rounded-2xl text-center font-extrabold"
+        />
+        <button
+          class="bg-primary text-secondary p-4 font-extrabold rounded-2xl"
+        >
+          Check!
+        </button>
+      </div>
+    </div>
+
+    <!-- Answer -->
+    <div class="pt-24">
+      <p>And your guess is..</p>
+      <h2 class="font-instrument-serif text-7xl text-primary pt-4">CORRECT!</h2>
+      <p>
+        It's <span class="text-primary text-2xl font-bold pt-4">67</span>!
+        Better luck next time!
+      </p>
+    </div>
+
+    <footer class="absolute bottom-0 translate-1/2">
+      <p class="text-center">Made with ♡ by <a href="">queenshafarania</a></p>
+    </footer>
+  </body>
+</html>
