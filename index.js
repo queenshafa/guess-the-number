@@ -24,12 +24,29 @@ function checkGuess() {
     result.textContent = "CORRECT!";
     message.textContent = "Hey! You got it! I think you can read mind!";
     checkBtn.disabled = true;
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
   } else if (userGuess < secretNumber) {
     result.textContent = "TOO LOW!";
     message.textContent = "Nope, Try again, higher!";
+
+    guessInput.classList.add("shake-animation");
+
+    setTimeout(() => {
+      guessInput.classList.remove("shake-animation");
+    }, 500);
   } else if (userGuess > secretNumber) {
     result.textContent = "TOO HIGH!";
     message.textContent = "Nope, Try again, lower!";
+
+    guessInput.classList.add("shake-animation");
+
+    setTimeout(() => {
+      guessInput.classList.remove("shake-animation");
+    }, 500);
   }
 
   guessInput.value = "";
